@@ -1,0 +1,24 @@
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime JS
+
+<div class="my-component">
+    <div>
+        <input type="text" id="ba-address"
+            @bind-value="Predicate" @bind-value:event="oninput" @onkeyup="OnKeyup"
+            placeholder="please input address" />
+    </div>
+
+    @if (IsShowCandidates)
+    {
+        <div id="ba-address-candidates" style="position:absolute;top:@(Top)px;left:@(Left)px;z-index:1;min-width:@(Width)px;padding:2px;">
+            <ul>
+                <li>a</li>
+                <li>b</li>
+            </ul>
+        </div>
+    }
+</div>
+
+@code {
+
+}
